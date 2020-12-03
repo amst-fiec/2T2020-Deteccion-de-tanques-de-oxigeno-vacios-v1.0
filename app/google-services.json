@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "608513749551",
+    "project_id": "tanquesoxigeno-d8464",
+    "storage_bucket": "tanquesoxigeno-d8464.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608513749551:android:d0aecfbca6d287c1278cda",
+        "android_client_info": {
+          "package_name": "com.example.tanquesoxigeno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608513749551-5g1120dubog91r496fuap0g5qa5a4k85.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tanquesoxigeno",
+            "certificate_hash": "cc27f12b2a699feddbf037b44554b99aa39fe2d2"
+          }
+        },
+        {
+          "client_id": "608513749551-k2j89b01cv90v4oiok9netu9cv1cbc4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbPoNVsOU2XTsiwSPn1ueXhH2WPR5ftFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608513749551-k2j89b01cv90v4oiok9netu9cv1cbc4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
