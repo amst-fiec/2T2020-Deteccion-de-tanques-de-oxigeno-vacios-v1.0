@@ -1,17 +1,24 @@
 package com.example.tanquesoxigeno;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
@@ -19,7 +26,7 @@ import java.util.HashMap;
 public class Menu extends AppCompatActivity {
     TextView txt_name;
     ImageView imv_photo;
-    Button btn_logout;
+    ProgressBar pb;
     DatabaseReference db_reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +43,9 @@ public class Menu extends AppCompatActivity {
         String photo = info_user.get("user_photo");
         Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
 
-
+        db_reference = FirebaseDatabase.getInstance().getReference();
+        pb = (ProgressBar) findViewById(R.id.barraBateria);
+        leerBateria();
     }
 
     public void irEstado(View view){
@@ -51,10 +60,36 @@ public class Menu extends AppCompatActivity {
         intent.putExtra("msg", "cerrarSesion");
         startActivity(intent);
     }
-    public void iniciarBaseDeDatos(){
-        db_reference = FirebaseDatabase.getInstance().getReference().child("Grupo");
-    }
 
+    private void leerBateria() {
+        db_reference.child("Usuario").child("alfombra").addValueEventListener(new ValueEventListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    String bat = snapshot.child("bateria").getValue().toString();
+                    try {
+                        int porc = Integer.parseInt(bat);
+                        if(porc>15 && porc<=100){
+                            pb.setProgress(porc);
+                            pb.setProgressDrawable(getDrawable(R.drawable.pb_drawable));
+                        }
+                        else{
+                            pb.setProgress(porc);
+                            pb.setProgressDrawable(getDrawable(R.drawable.pb_drawable_2));
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
 
 
 }
