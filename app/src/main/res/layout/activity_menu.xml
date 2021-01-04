@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Menu">
 
     <Button
@@ -13,7 +14,7 @@
         android:layout_marginTop="12dp"
         android:onClick="irEstado"
         android:text="VER ESTADO DEL TANQUE"
-        app:backgroundTint="@color/teal_700"
+        app:backgroundTint="#009688"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
