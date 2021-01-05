@@ -27,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     GoogleSignInClient mGoogleSignInClient;
     Button btn_login;
+
+    public static HashMap<String, String> getInfo_user() {
+        return info_user;
+    }
+
+    public static void setInfo_user(HashMap<String, String> info_user) {
+        MainActivity.info_user = info_user;
+    }
+
+    static HashMap<String, String> info_user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void updateUI(FirebaseUser user) {
         if (user != null) {
-            HashMap<String, String> info_user = new HashMap<String, String>();
+            info_user = new HashMap<String, String>();
             info_user.put("user_name", user.getDisplayName());
             info_user.put("user_photo", String.valueOf(user.getPhotoUrl()));
 

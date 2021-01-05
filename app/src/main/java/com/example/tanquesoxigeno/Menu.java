@@ -29,18 +29,20 @@ public class Menu extends AppCompatActivity {
     ImageView imv_photo;
     ProgressBar pb;
     DatabaseReference db_reference;
+    HashMap <String,String> info_user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
         Intent intent = getIntent();
-        HashMap<String, String> info_user = (HashMap<String, String>)intent.getSerializableExtra("info_user");
+        info_user = MainActivity.getInfo_user();
 
         txt_name = findViewById(R.id.textUsername);
         imv_photo = findViewById(R.id.imageFotoPerfil);
 
         txt_name.setText(info_user.get("user_name"));
+        //txt_name.setText("Holiii");
         String photo = info_user.get("user_photo");
         Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
 
