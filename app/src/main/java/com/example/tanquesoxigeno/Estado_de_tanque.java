@@ -80,7 +80,7 @@ public class Estado_de_tanque extends AppCompatActivity {
     }
 
     public void irMenu(View view){
-        Intent menu = new Intent(getBaseContext(),Menu.class);
+        Intent menu = new Intent(this,Menu.class);
         startActivity(menu);
     }
 }
