@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "608513749551",
+    "firebase_url": "https://tanquesoxigeno-d8464-default-rtdb.firebaseio.com",
     "project_id": "tanquesoxigeno-d8464",
     "storage_bucket": "tanquesoxigeno-d8464.appspot.com"
   },
@@ -19,6 +20,22 @@
           "android_info": {
             "package_name": "com.example.tanquesoxigeno",
             "certificate_hash": "cc27f12b2a699feddbf037b44554b99aa39fe2d2"
+          }
+        },
+        {
+          "client_id": "608513749551-et0356stmb290iamehk5308303irejqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tanquesoxigeno",
+            "certificate_hash": "e7c8df0ee47310d447c49fda4d317cb72f54b471"
+          }
+        },
+        {
+          "client_id": "608513749551-p3tpq7ji0corqrnt0554ukdpbteu4cst.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tanquesoxigeno",
+            "certificate_hash": "8d14ab33778003a1f061cba384306f871c25f341"
           }
         },
         {
