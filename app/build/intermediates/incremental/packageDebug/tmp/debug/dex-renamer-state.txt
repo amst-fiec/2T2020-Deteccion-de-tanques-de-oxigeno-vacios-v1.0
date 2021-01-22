@@ -1,0 +1,4 @@
+#Thu Jan 21 21:15:21 COT 2021
+base.0=C\:\\Users\\pieri\\Music\\2T2020-Deteccion-de-tanques-de-oxigeno-vacios-v1.0\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
