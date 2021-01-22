@@ -28,31 +28,41 @@ public class Menu extends AppCompatActivity {
     TextView txt_name;
     ImageView imv_photo;
     ProgressBar pb;
+    String alfombra;
     DatabaseReference db_reference;
     HashMap <String,String> info_user;
+    String conGoogle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Intent intent = getIntent();
-        info_user = MainActivity.getInfo_user();
 
         txt_name = findViewById(R.id.textUsername);
         imv_photo = findViewById(R.id.imageFotoPerfil);
 
-        txt_name.setText(info_user.get("user_name"));
-        //txt_name.setText("Holiii");
-        String photo = info_user.get("user_photo");
-        Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
+        //Intent intent = getIntent();
+        info_user = MainActivity.getInfo_user();
 
-        db_reference = FirebaseDatabase.getInstance().getReference();
+        txt_name.setText(info_user.get("user_name"));
+        alfombra=info_user.get("alfombraID");
+        conGoogle = info_user.get("conGoogle");
+
+        db_reference = FirebaseDatabase.getInstance().getReference().child(alfombra);
+
+        if(conGoogle=="SI") {
+            String photo = info_user.get("user_photo");
+            Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
+        }
+
         pb = (ProgressBar) findViewById(R.id.barraBateria);
         leerBateria();
     }
 
     public void irEstado(View view){
         Intent estado = new Intent(getBaseContext(),Estado_de_tanque.class);
+        estado.putExtra("info_user", info_user);
         startActivity(estado);
     }
 
@@ -65,7 +75,7 @@ public class Menu extends AppCompatActivity {
     }
 
     private void leerBateria() {
-        db_reference.child("Usuario").child("alfombra").addValueEventListener(new ValueEventListener() {
+        db_reference.addValueEventListener(new ValueEventListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
