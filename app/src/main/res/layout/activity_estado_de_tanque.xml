@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/tema2"
     tools:context=".Estado_de_tanque">
 
     <ImageView
@@ -25,7 +26,7 @@
         android:gravity="center"
         android:text="Estado del tanque"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#2B5D74"
+        android:textColor="#5E35B1"
         android:textSize="36sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
@@ -37,7 +38,7 @@
         android:id="@+id/txtPorcentaje"
         android:layout_width="256dp"
         android:layout_height="37dp"
-        android:background="#2CA0A4"
+        android:background="#15ECDA"
         android:gravity="center|left"
         android:text="Peso: "
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -49,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757" />
+        app:layout_constraintVertical_bias="0.68" />
 
     <Button
         android:id="@+id/button"
@@ -59,14 +60,14 @@
         android:text="Regresar"
         android:textColor="#FFFFFF"
         android:textColorHint="#2196F3"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#8E24AA"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.958"
-        app:strokeColor="#AD3FB5" />
+        app:strokeColor="#8E24AA" />
 
     <TextView
         android:id="@+id/txtMax"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@mipmap/tema2"
     tools:context=".Menu">
 
     <Button
@@ -24,12 +24,12 @@
         android:id="@+id/imageView5"
         android:layout_width="240dp"
         android:layout_height="138dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="212dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tanque" />
+        app:srcCompat="@mipmap/tanque" />
 
     <ProgressBar
         android:id="@+id/barraBateria"
@@ -60,12 +60,12 @@
         android:id="@+id/imageView6"
         android:layout_width="102dp"
         android:layout_height="82dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEstado"
-        app:srcCompat="@drawable/battery" />
+        app:srcCompat="@mipmap/bateria" />
 
     <ImageView
         android:id="@+id/imageFotoPerfil"

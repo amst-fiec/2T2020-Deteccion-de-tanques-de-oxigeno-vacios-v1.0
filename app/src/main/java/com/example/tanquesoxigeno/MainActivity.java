@@ -305,9 +305,16 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "NOMBRE DE USUARIO NO DISPONIBLE", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(MainActivity.this, "REGISTRADO", Toast.LENGTH_SHORT).show();
-                    DatabaseReference ref = db_reference.child("Usuarios");
-                    ref.child(editUser.getText().toString()).setValue(editPass.getText().toString());
+                    if(editUser.getText().toString().equals("")||editPass.getText().toString().equals("")){
+                        Toast.makeText(MainActivity.this, "LLene los campos porfavor", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(MainActivity.this, "REGISTRADO", Toast.LENGTH_SHORT).show();
+                        DatabaseReference ref = db_reference.child("Usuarios");
+                        ref.child(editUser.getText().toString()).setValue(editPass.getText().toString());
+
+                    }
+
 
                 }
 
