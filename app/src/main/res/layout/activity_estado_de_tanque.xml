@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fondo3"
     tools:context=".Estado_de_tanque">
 
     <ImageView
@@ -25,7 +26,7 @@
         android:gravity="center"
         android:text="Estado del tanque"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#2B5D74"
+        android:textColor="#5E35B1"
         android:textSize="36sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
@@ -37,7 +38,7 @@
         android:id="@+id/txtPorcentaje"
         android:layout_width="256dp"
         android:layout_height="37dp"
-        android:background="#2CA0A4"
+        android:background="#35EDE7"
         android:gravity="center|left"
         android:text="Peso: "
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -46,10 +47,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757" />
+        app:layout_constraintVertical_bias="0.668" />
 
     <Button
         android:id="@+id/button"
@@ -59,13 +60,14 @@
         android:text="Regresar"
         android:textColor="#FFFFFF"
         android:textColorHint="#2196F3"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#8E24AA"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958"
+        app:layout_constraintVertical_bias="0.87"
         app:strokeColor="#AD3FB5" />
 
     <TextView
@@ -87,9 +89,9 @@
         android:id="@+id/txtMin"
         android:layout_width="300dp"
         android:layout_height="31dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center|center_horizontal|left|center_vertical"
         android:text="Peso Min: "
@@ -102,9 +104,9 @@
         android:id="@+id/txtAltura"
         android:layout_width="298dp"
         android:layout_height="33dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center|center_horizontal|left|center_vertical"
         android:text="Altura: "
