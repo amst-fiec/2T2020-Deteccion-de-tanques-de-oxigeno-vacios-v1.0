@@ -208,6 +208,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(tieneAlfombraSG==false){
                     Toast.makeText(MainActivity.this, "NO TIENE ALFOMBRAS ASOCIADAS A ESTA CUENTA", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.addCategory(Intent.CATEGORY_HOME);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+
                 }
             }
 
@@ -282,6 +287,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(getBaseContext(), "NO TIENE ALFOMBRA ASOCIADA CON ESTA CUENTA", Toast.LENGTH_SHORT).show();
+                    cerrarSesion();
+                    Intent intent = new Intent(Intent.ACTION_MAIN);
+                    intent.addCategory(Intent.CATEGORY_HOME);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+
                 }
             }
             @Override public void onCancelled(DatabaseError databaseError) {

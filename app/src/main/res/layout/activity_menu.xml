@@ -11,37 +11,31 @@
         android:id="@+id/btnEstado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:onClick="irEstado"
         android:text="VER ESTADO DEL TANQUE"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#8E24AA"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="240dp"
-        android:layout_height="138dp"
-        android:layout_marginTop="212dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/tanque" />
+        app:layout_constraintTop_toBottomOf="@+id/textUsername"
+        app:layout_constraintVertical_bias="0.409" />
 
     <ProgressBar
         android:id="@+id/barraBateria"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="249dp"
         android:layout_height="30dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="16dp"
         android:indeterminateDrawable="@android:drawable/progress_horizontal"
         android:progressDrawable="@drawable/pb_drawable"
         android:scrollbarSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEstado"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -49,23 +43,12 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="Nivel de batería"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/purple_700"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barraBateria" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="102dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEstado"
-        app:srcCompat="@mipmap/bateria" />
 
     <ImageView
         android:id="@+id/imageFotoPerfil"
@@ -113,5 +96,29 @@
         android:text="Cerrar sesión"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="177dp"
+        android:layout_height="161dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEstado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFotoPerfil"
+        app:layout_constraintVertical_bias="0.864"
+        app:srcCompat="@mipmap/tanquevacio" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="144dp"
+        android:layout_height="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEstado"
+        app:layout_constraintVertical_bias="0.312"
+        app:srcCompat="@mipmap/bateria2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
